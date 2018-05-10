@@ -25,7 +25,7 @@ public class TimeConverterImpl implements TimeConverter {
     }
 
     // Get hours method will take an argument as hrs and return the equvivalent Berlin clock hours on top two rows
-    private String getHours(int p_hours){
+    protected String getHours(int p_hours){
 
         StringBuffer hours;
         hours = new StringBuffer(ALL_HOURS_O);
@@ -57,7 +57,7 @@ public class TimeConverterImpl implements TimeConverter {
 
     // Get Minutes method will take an argument as minutes and return the equvivalent Berlin clock minutes on the minutes  rows
 
-    private String getMinutes(int p_minutes){
+    protected String getMinutes(int p_minutes){
 
         StringBuilder minutes;
         minutes = new StringBuilder(ALL_MINUTES_O);
@@ -88,7 +88,7 @@ public class TimeConverterImpl implements TimeConverter {
         return minutes.toString();
     }
 
-    private String getSeconds(int seconds){
+    protected String getSeconds(int seconds){
         if(0==seconds % 2 ){
             return YELLOW;
         }
